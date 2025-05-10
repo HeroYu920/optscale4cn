@@ -28,7 +28,7 @@
   run_once: true
 
 - name: Install dashboard
-  shell: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+  shell: kubectl apply -f https://github.moeyy.xyz/https://raw.githubusercontent.com/HeroYu920/optscale4cn/refs/heads/integration/optscale-deploy/ansible/roles/k8s-configure/tasks/dashboard.yaml
   run_once: true
 
 - import_tasks: helm.yaml
