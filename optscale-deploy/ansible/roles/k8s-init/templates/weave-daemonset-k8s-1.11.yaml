@@ -120,7 +120,7 @@ items:
         spec:
           initContainers:
             - name: weave-init
-              image: 'weaveworks/weave-kube:2.8.1'
+              image: 'registry.cn-shanghai.aliyuncs.com/hub-proxy-sh/weave-kube:2.8.1'
               command:
                 - /home/weave/init.sh
               env:
@@ -152,7 +152,7 @@ items:
                       fieldPath: spec.nodeName
                 - name: IPALLOC_RANGE
                   value: {{ k8s_cidr }}
-              image: 'weaveworks/weave-kube:2.8.1'
+              image: 'registry.cn-shanghai.aliyuncs.com/hub-proxy-sh/weave-kube:2.8.1'
               readinessProbe:
                 httpGet:
                   host: 127.0.0.1
@@ -182,7 +182,7 @@ items:
                     fieldRef:
                       apiVersion: v1
                       fieldPath: spec.nodeName
-              image: 'weaveworks/weave-npc:2.8.1'
+              image: 'registry.cn-shanghai.aliyuncs.com/hub-proxy-sh/weave-npc:2.8.1'
 #npc-args
               resources:
                 requests:
