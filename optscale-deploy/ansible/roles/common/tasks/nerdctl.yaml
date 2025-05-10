@@ -2,7 +2,7 @@
   block:
     - name: Download nerdctl
       get_url:
-        url: https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz
+        url: https://github.moeyy.xyz/https://github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz
         dest: /tmp/nerdctl-{{ nerdctl_version }}-linux-amd64.tar.gz
     
     - name: Extract nerdctl
@@ -53,7 +53,7 @@
   block:
     - name: Download buildkit
       get_url:
-        url: https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz
+        url: https://github.moeyy.xyz/https://github.com/moby/buildkit/releases/download/v{{ buildkit_version }}/buildkit-v{{ buildkit_version }}.linux-amd64.tar.gz
         dest: /tmp/buildkit-{{ buildkit_version }}-linux-amd64.tar.gz
 
     - name: Extract buildkit
