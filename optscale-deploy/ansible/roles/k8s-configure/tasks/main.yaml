@@ -61,7 +61,7 @@
   shell: helm repo update
 
 - name: Install nginx ingress controller
-  shell: helm upgrade --install ngingress bitnami/nginx-ingress-controller --version 11.3.17 --set image.registry=registry.cn-shanghai.aliyuncs.com --set image.repository=hub-proxy-sh/ingress-nginx-controller --set image.tag=1.11.1-debian-12-r3 --set hostNetwork=true --set extraArgs.default-ssl-certificate=default/defaultcert --set kind=DaemonSet --set daemonset.useHostPort=true --set containerPorts.http=80 --set containerPorts.https=443 --set resources.limits.memory=896Mi --set resources.requests.memory=384Mi
+  shell: helm upgrade --install ngingress bitnami/nginx-ingress-controller --version 11.3.17 --set image.registry=registry.cn-shanghai.aliyuncs.com --set image.repository=hub-proxy-sh/ingress-nginx-controller --set image.tag=1.11.1-debian-12-r3 --set defaultBackend.image.registry=registry.cn-shanghai.aliyuncs.com --set defaultBackend.image.repository=hub-proxy-sh/nginx-unprivileged --set defaultBackend.image.tag=1.27.0-debian-12-r4 --set hostNetwork=true --set extraArgs.default-ssl-certificate=default/defaultcert --set kind=DaemonSet --set daemonset.useHostPort=true --set containerPorts.http=80 --set containerPorts.https=443 --set resources.limits.memory=896Mi --set resources.requests.memory=384Mi
   run_once: true
 
 - name: Copy custom nginx-ingress chart
