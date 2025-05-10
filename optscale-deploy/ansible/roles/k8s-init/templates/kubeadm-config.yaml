@@ -1,6 +1,7 @@
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
+imageRepository: "registry.aliyuncs.com/google_containers"
 kubernetesVersion: {{ kubernetes_version }}
 {% if lb_address is defined %}
 controlPlaneEndpoint: "{{ lb_address }}:{{ lb_port }}"
