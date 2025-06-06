@@ -19,7 +19,7 @@
   shell: "{{ tools_venv_path }}/bin/pip install --upgrade pip==24.0.0"
 
 - name: Install requirements
-  shell: "{{ tools_venv_path }}/bin/pip install -r {{ remote_requirements_path }}"
+  shell: "{{ tools_venv_path }}/bin/pip install -r {{ remote_requirements_path }} -i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn"
 
 - name: Copy cluster info script
   copy:
