@@ -102,13 +102,13 @@ sudo apt update; sudo apt install python3-pip sshpass git python3-virtualenv pyt
 Clone the repository
 
 ```markdown
-git clone https://github.com/hystax/optscale.git
+git clone https://github.moeyy.xyz/https://github.com/HeroYu920/optscale4cn.git
 ```
 
 Change current directory:
 
 ```
-cd optscale/optscale-deploy
+cd optscale4cn/optscale-deploy
 ```
 
 #### Preparing virtual environment
@@ -127,7 +127,7 @@ Run the following command:
 **comma after ip address is required**
 
 ```
-ansible-playbook -e "ansible_ssh_user=<user>" -k -K -i "<ip address>," ansible/k8s-master.yaml
+ansible-playbook -e "ansible_connection=local" -e "ansible_ssh_user=<user>" -k -K -i "<ip address>," ansible/k8s-master.yaml
 ```
 
 where `<user>` - actual username; `<ip address>` - host ip address,
